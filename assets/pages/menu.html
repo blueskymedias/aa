@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+<link rel="stylesheet" href="../static/menu.css">
+</head>
+<body>
+<div class="header-nav">
+    <h1 class="logo">
+          <a href="#">
+            <img src="../images/img/logo.png" alt="Logo">
+          </a>
+    </h1>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+            <img src="../images/icons/menu-alt-256.webp" id="menu-icon" width="30px">
+            <img src="../images/icons/icon-close-round-512.webp" id="close-icon" width="30px">
+    </label>
+    <nav class="navbar">
+            <a href="../../index.html"style="--i:0;">Home</a>
+            <a href="aboutus.html"style="--i:1;">Abouts</a>
+            <a href="menu.html"style="--i:2;">Our Menu</a>
+            <a href="contactus.html"style="--i:3;">Contact</a>
+    </nav>
+</div>
+
+<!--image slider-->
+<div class="slider">
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <img src="../images/img/1.jpg" alt="Slide 1">
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="../images/img/2.jpg" alt="Slide 2">
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="../images/img/3.jpg" alt="Slide 3">
+          </div>
+        </div>    
+      </div>
+
+<!--menu section-->      
+<div class="menu-section">
+    <input type="text" id="search" class="search-bar" placeholder="Search food..." onkeyup="filterMenu()">
+    <!-- Veg / Non-Veg Dropdown -->
+    <select id="vegFilter" class="dropdown" onchange="filterMenu()">
+        <option value="all">All</option>
+        <option value="veg">Veg</option>
+        <option value="nonveg">Non-Veg</option>
+    </select>
+    <!-- Main Tabs for Indian & Chinese Menu -->
+    <div class="tabs-container">
+        <div class="tab active" id="indian-tab" onclick="switchMenu('indian')">Indian Menu</div>
+        <div class="ta" id="chinese-tab">Chinese Menu</div><!--onclick="switchMenu('chinese')"-->
+    </div>
+
+    <!-- Indian Menu Subcategories -->
+    <div class="tabs-container" id="indian-tabs">
+        <div class="tab active" data-category="all" onclick="switchCategory('all', 'indian')">All</div>
+        <div class="tab" data-category="starters" onclick="switchCategory('starters', 'indian')">Starters</div>
+        <div class="tab" data-category="kooralu" onclick="switchCategory('kooralu', 'indian')">Telugu vadi kooralu</div>
+        <div class="tab" data-category="desserts" onclick="switchCategory('desserts', 'indian')">Desserts</div>
+    </div>
+
+    <!-- Chinese Menu Subcategories -->
+    <div class="tabs-container" id="chinese-tabs" style="display:none;">
+        <div class="tab active" data-category="all" onclick="switchCategory('all', 'chinese')">All</div>
+        <div class="tab" data-category="starters" onclick="switchCategory('starters', 'chinese')">Starters</div>
+        <div class="tab" data-category="noodles" onclick="switchCategory('noodles', 'chinese')">Noodles</div>
+        <div class="tab" data-category="rice" onclick="switchCategory('rice', 'chinese')">Rice</div>
+    </div>
+
+<!--indian-->
+    <div class="menu-items" id="menu">
+        <!--starters-->
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/Konaseema-Paneer-Vepudu.png" alt="Starter 1">
+            <p>Konaseema Paneer</p>
+            <p class="price">₹299</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/chicken 65 bandi style.png" alt="Starter 2">
+            <p>Bandi Style Chicken 65</p>
+            <p class="price">₹309</p>
+        </div>
+        <div class="menu-item" id="small-image" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/moka jonna vada.png" alt="Starter 1">
+            <p>Mokka Jonna Vada</p>
+            <p class="price">₹239</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/gongura-chicken.png" alt="Starter 2">
+            <p>Gongura chicken</p>
+            <p class="price">₹349</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/palletoori puttagodugula vepudu.png" alt="Starter 1">
+            <p>Palletoori Puttagodugula Vepudu</p>
+            <p class="price">₹279</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/gundu amma  mamasam.png" alt="Starter 2">
+            <p>Gundamma Gari Mamsam Vepudu</p>
+            <p class="price">₹469</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/panner gongura.png" alt="Starter 1">
+            <p>Paneer Gongura</p>
+            <p class="price">₹319</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/kkd kodi wings.png" alt="Starter 2">
+            <p>Kakinada kodi wings</p>
+            <p class="price">₹319</p>
+        </div>
+
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/panner.png" alt="Starter 1">
+            <p>Paneer</p>
+            <p class="price">₹319</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/koramenufry.png" alt="Starter 2">
+            <p>koramenu fry</p>
+            <p class="price">₹319</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="veg">
+            <img src="menuimages/starters/veg/soyakeemabajji.png" alt="Starter 1">
+            <p>soya keema Bajji</p>
+            <p class="price">₹249</p>
+        </div>
+        <div class="menu-item" data-category="starters" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/starters/non-veg/mutton ghee rost.png" alt="Starter 2">
+            <p>Mutton Ghee Rost</p>
+            <p class="price">₹449</p>
+        </div>
+
+        <!--kooralu-->
+        <div class="menu-item" data-category="kooralu" data-menu="indian" data-type="veg">
+            <img src="menuimages/telugukooralu/veg/gutti-vankaya-masala-kura.png" alt="Starter 1">
+            <p>gutti vankaya masala koora</p>
+            <p class="price">₹299</p>
+        </div>
+        <div class="menu-item" data-category="kooralu" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/telugukooralu/non-veg/gongura-chicken.png" alt="Starter 2">
+            <p>Gongura chicken</p>
+            <p class="price">₹309</p>
+        </div>
+        <div class="menu-item" data-category="kooralu" data-menu="indian" data-type="veg">
+            <img src="menuimages/telugukooralu/veg/paneer koora.png" alt="Starter 1">
+            <p>panner koora</p>
+            <p class="price">₹299</p>
+        </div>
+        <div class="menu-item" data-category="kooralu" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/telugukooralu/non-veg/kodi guddu iguru.png" alt="Starter 2">
+            <p>Kodi guddu iguru</p>
+            <p class="price">₹199</p>
+        </div>
+        
+        <div class="menu-item" data-category="kooralu" data-menu="indian" data-type="nonveg">
+            <img src="menuimages/telugukooralu/non-veg/royyala koora.png"alt="Starter 2">
+            <p>royyala koora</p>
+            <p class="price">₹299</p>
+        </div>
+
+        <!--chinese
+        <div class="menu-item" data-category="noodles" data-menu="chinese" data-type="veg">
+            <img src="noodles1.jpg" alt="Noodles">
+            <p>Veg Hakka Noodles</p>
+            <p class="price">$7</p>
+        </div>
+        <div class="menu-item" data-category="noodles" data-menu="chinese" data-type="nonveg">
+            <img src="noodles2.jpg" alt="Noodles">
+            <p>Chicken Hakka Noodles</p>
+            <p class="price">$9</p>
+        </div>-->
+    </div>
+    <div class="no-items" id="no-items">No items found</div>
+</div>
+<!--footer-->
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+       
+        </div>
+        <div class="footerNav">
+            <ul><li><a href="../../index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">Praveen</span></p>
+    </div>
+    <script src="../static/menu.js"></script>
+    <script src="../static/nav.js"></script>
+</body>
+</html>

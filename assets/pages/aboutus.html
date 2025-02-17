@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  
+  <!-- AOS Library for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+<link rel="stylesheet" href="../static/aboutsus.css">
+
+</head>
+<body>
+  <!--navbar-->
+  <div class="header-nav">
+    <h1 class="logo">
+          <a href="#">
+            <img src="../images/img/logo.png" alt="Logo">
+          </a>
+    </h1>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+            <img src="../images/icons/menu-alt-256.webp" id="menu-icon" width="30px">
+            <img src="../images/icons/icon-close-round-512.webp" id="close-icon" width="30px">
+    </label>
+    <nav class="navbar">
+            <a href="../../index.html"style="--i:0;">Home</a>
+            <a href="aboutus.html"style="--i:1;">Abouts</a>
+            <a href="menu.html"style="--i:2;">Our Menu</a>
+            <a href="contactus.html"style="--i:3;">Contact</a>
+    </nav>
+</div>
+
+  <!-- Hero Section -->
+  <header class="hero-section" data-aos="fade-down">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p><a href="../../index.html">Home &gt; </a> About Us</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" data-aos="fade-up">
+    <div class="about-container">
+      <div class="about-image" data-aos="fade-right">
+        <img src="../images/img/aboutsus.jpg" alt="Hospital Image" width="500px">
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <h2>Welcome to Aromas of Andhra</h2>
+        <p>At Aromas of Andhra, we bring flavors to life with a perfect blend of tradition and innovation. Located in the heart of the city, we offer a dining experience that tantalizes taste buds and creates unforgettable memories.</p>
+        <p>Our expert chefs craft each dish using the freshest, locally sourced ingredients, ensuring every bite is a delight. Whether you're here for a cozy dinner, a family gathering, or a special celebration, our warm ambiance and exceptional service guarantee a remarkable experience.</p>
+        <p>From gourmet delicacies to comfort food favorites, our diverse menu caters to all palates. Come and savor the taste of perfection!</p>
+        <a href="menu.html" class="btn" data-aos="fade-in">Our menu</a>
+    </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats" data-aos="fade-down">
+    <div class="stat" data-target="16">
+      <h3>0</h3>
+      <p>Years Of Experience</p>
+    </div>
+    <div class="stat" data-target="30">
+      <h3>0</h3>
+      <p>Expert chefs</p>
+    </div>
+    <div class="stat" data-target="300">
+      <h3>0</h3>
+      <p>food items</p>
+    </div>
+    <div class="stat" data-target="3497">
+      <h3>0</h3>
+      <p>Satisfied people</p>
+    </div>
+  </section>
+
+
+  <div class="team" data-aos="fade-up">
+    <div class="team-cards"data-aos="fade-up">
+    <div class="team-card" data-aos="fade-up">
+        <img src="../images/img/chaf.jpg" alt="Dr. S Kamala Chaitanya">
+        <h3>S.Kamala Chaitanya</h3>
+    </div>
+    <div class="team-card"data-aos="fade-up">
+        <img src="../images/img/chaf.jpg" alt="Dr. V Ramyakrishna">
+        <h3>V.Ramyakrishna</h3>
+    </div>
+    <div class="team-card"data-aos="fade-up">
+        <img src="../images/img/chaf.jpg" alt="Dr. Chaitanya Pilladi">
+        <h3>c.Chaitanya Pilladi</h3>
+    </div>
+    <div class="team-card"data-aos="fade-up">
+        <img src="../images/img/chaf.jpg" alt="Dr. Sri Tulasi Pilladi">
+        <h3>S.Sri Tulasi Pilladi</h3>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!--footer-->
+  <footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        
+        </div>
+        <div class="footerNav">
+            <ul><li><a href="../../index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">Praveen</span></p>
+    </div>
+
+    <script src="../static/nav.js"></script>
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 2500, once: true });
+
+    // Stats Counter
+    document.addEventListener("DOMContentLoaded", () => {
+      const stats = document.querySelectorAll(".stat h3");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = +entry.target.parentElement.dataset.target;
+            let count = 0;
+            const updateStat = () => {
+              count += Math.ceil(target / 100);
+              if (count >= target) {
+                entry.target.innerText = target + "+";
+              } else {
+                entry.target.innerText = count + "+";
+                setTimeout(updateStat, 30);
+              }
+            };
+            updateStat();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      stats.forEach(stat => observer.observe(stat));
+    });
+  </script>
+
+</body>
+</html>

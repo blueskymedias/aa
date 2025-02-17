@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aromas of Andhra</title>
+    
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/static/style.css">
+</head>
+<body>
+  <!--navbar-->
+  <div class="header-nav">
+    <h1 class="logo">
+      <a href="#">
+        <img src="assets/images/img/logo.png" alt="Logo">
+      </a>
+    </h1>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <img src="assets/images/icons/menu-alt-256.webp" id="menu-icon" width="30px">
+        <img src="assets/images/icons/icon-close-round-512.webp" id="close-icon" width="30px">
+    </label>
+    <nav class="navbar">
+        <a href="index.html"style="--i:0;">Home</a>
+        <a href="assets/pages/aboutus.html"style="--i:1;">Abouts</a>
+        <a href="assets/pages/menu.html"style="--i:2;">Our Menu</a>
+        <a href="assets/pages/contactus.html"style="--i:3;">Contact</a>
+    </nav>
+</div>
+
+<!--for bg video-->
+<section class="hero">
+  <div class="hero-video-wrapper">
+    <video class="hero-video" autoplay loop muted>
+      <source src="assets/videos/herobgv.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div> <!-- The overlay for blur/tint -->
+  <div class="hero-content">
+    <h1 class="hero-title">Delicious Food for Every Taste</h1>
+    <p class="hero-description">Discover the best dishes crafted with passion and love.</p>
+    <a href="assets/pages/menu.html" class="hero-button">Explore the Menu</a>
+  </div>
+</section>
+     
+<!--about us-->
+<div class="about-us">
+  <div class="container-abouts">
+    <div class="row-abouts">
+      <!-- Left Side: Text Content -->
+      <div class="flex-abouts about-content">
+        <h2>About us</h2>
+        <h3>Welcome to Aromas of Andhra, where passion for food meets unforgettable dining experiences!</h3>
+        <p>At Aromas Of Andhra, we believe that great food brings people together. Our chefs craft each dish with the finest ingredients, blending tradition with innovation to create flavors that delight. Whether you're craving a comforting classic or an exciting new taste, our menu is designed to satisfy every palate.</p> 
+        <div class="social-links-abouts">
+          <a href="#"><img src="assets/images/icons/insta.webp" width="38px"></a>
+          <a href="#"><img src="assets/images/icons/fb.webp" width="38px"></a>
+        </div>
+      </div>
+      <!-- Right Side: Image -->
+      <div class="flex-abouts about-img">
+        <img src="assets/images/img/aboutsus.jpg" width="600px" alt="About Us Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--about us end-->
+  <section class="food-menu">
+    <h1 class="menu-title">Food Menu</h1>
+    <h2 class="menu-title2">Most Popular Items</h2>
+    <div class="tab-container">
+        <div class="tabs">
+          <img src="10131951_burger_line_icon.png" alt="" width="46px" id="icon-menu">  <button class="tab active" data-tab="breakfast"><span class="menu-span">Popular</span><br> Breakfast</button>
+            <button class="tab" data-tab="lunch">Starters</button>
+            <button class="tab" data-tab="dinner">🍽 Biryani</button>
+        </div>
+        <!-- Breakfast Tab Content -->
+        <div class="tab-content active" id="breakfast">
+            <div class="menu-container">
+                <!-- Left Side Breakfast Items -->
+                <div class="left-side">
+                    <div class="menu-item" id="one">
+                        <img src="assets/images/tiffen/bonda.png" alt="Breakfast Item">
+                        <div class="menu-info">
+                            <h3>Bonda</h3>                           
+                        </div>
+                        <span class="price">₹29</span>
+                    </div>
+                    <div class="menu-item" id="two">
+                        <img src="assets/images/tiffen/dosa.png" alt="Breakfast Item">
+                        <div class="menu-info">
+                            <h3>Dosa</h3>          
+                        </div>
+                        <span class="price">₹49</span>
+                    </div>
+                   <div class="menu-item" id="three">
+                        <img src="assets/images/tiffen/idlis.png" alt="Breakfast Item" >
+                        <div class="menu-info">
+                            <h3>Idli</h3> 
+                        </div>
+                        <span class="price">₹29</span>
+                    </div>
+               
+                    <!-- Add more breakfast items as needed -->
+                </div>
+                <!-- Right Side Breakfast Items -->
+                <div class="right-side">
+                    <div class="menu-item" id="four">
+                        <img src="assets/images/tiffen/passratu.png" alt="Breakfast Item">
+                        <div class="menu-info">
+                            <h3>Passratu</h3>
+                        </div>
+                        <span class="price">₹49</span>
+                    </div>
+                    <div class="menu-item" id="five">
+                        <img src="assets/images/tiffen/poori.png" alt="Breakfast Item">
+                        <div class="menu-info">
+                            <h3>Poori</h3>
+                        </div>
+                        <span class="price">₹29</span>
+                    </div>
+                    <div class="menu-item" id="six">
+                      <img src="assets/images/tiffen/upma.png" alt="Breakfast Item">
+                      <div class="menu-info">
+                          <h3>Upma</h3>
+                      </div>
+                      <span class="price">₹29</span>
+                  </div>
+                 
+                    <!-- Add more breakfast items as needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Lunch Tab Content -->
+        <div class="tab-content" id="lunch">
+            <div class="menu-container">
+                <!-- Left Side Lunch Items -->
+                <div class="left-side">
+                    <div class="menu-item">
+                        <img src="assets/images/starters/bujji soya.png" alt="Lunch Item">
+                        <div class="menu-info">
+                            <h3>soya keema bajji</h3>
+                        </div>
+                        <span class="price">₹149</span>
+                    </div>
+                    <div class="menu-item">
+                      <img src="assets/images/starters/gundu amma  mamasam.png" alt="Lunch Item">
+                      <div class="menu-info">
+                          <h3>Gundamma Gari maamasam</h3>
+                      </div>
+                      <span class="price">₹349</span>
+                  </div>
+                  <div class="menu-item">
+                    <img src="assets/images/starters/kkd kodi wings.png" alt="Lunch Item">
+                    <div class="menu-info">
+                        <h3>Kakinada kodi wings</h3>
+                    </div>
+                    <span class="price">₹249</span>
+                </div>
+                    <!-- Add more lunch items as needed -->
+                </div>
+                <!-- Right Side Lunch Items -->
+                <div class="right-side">
+                    <div class="menu-item">
+                        <img src="assets/images/starters/moka jonna vada.png" alt="Lunch Item">
+                        <div class="menu-info">
+                            <h3>Mokka Jonna Vada</h3>
+                        </div>  
+                        <span class="price">₹199</span>
+                    </div>
+                    <div class="menu-item">
+                      <img src="assets/images/starters/mutton ghee rost.png" alt="Lunch Item">
+                      <div class="menu-info">
+                          <h3>Mutton Ghee Rost</h3>
+                      </div>
+                      <span class="price">₹349</span>
+                  </div>
+                  <div class="menu-item">
+                    <img src="assets/images/starters/panner.png" alt="Lunch Item">
+                    <div class="menu-info">
+                        <h3>Panner</h3>
+                    </div>
+                    <span class="price">₹199</span>
+                </div>
+                    <!-- Add more lunch items as needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Dinner Tab Content -->
+        <div class="tab-content" id="dinner">
+            <div class="menu-container">
+                <!-- Left Side Dinner Items -->
+                <div class="left-side">
+                    <div class="menu-item">
+                        <img src="assets/images/biryani/chicken biryani.png" alt="Dinner Item">
+                        <div class="menu-info">
+                            <h3>Chicken Biryani</h3>
+                        </div>
+                        <span class="price">₹239</span>
+                    </div>
+                    <div class="menu-item">
+                      <img src="assets/images/biryani/egg-biryani1.png" alt="Dinner Item">
+                      <div class="menu-info">
+                          <h3>Egg Biryani</h3>
+                      </div>
+                      <span class="price">₹199</span>
+                  </div>
+                    <!-- Add more dinner items as needed -->
+                </div>
+                <!-- Right Side Dinner Items -->
+                <div class="right-side">
+                    <div class="menu-item">
+                        <img src="assets/images/biryani/mutton-biryani2.png" alt="Dinner Item">
+                        <div class="menu-info">
+                            <h3>Mutton Biryani</h3>
+                        </div>
+                        <span class="price">₹299</span>
+                    </div>
+                    <div class="menu-item">
+                      <img src="assets/images/biryani/panner1.png" alt="Dinner Item">
+                      <div class="menu-info">
+                          <h3>Panner</h3>
+                      </div>
+                      <span class="price">₹399</span>
+                  </div>
+                    <!-- Add more dinner items as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-video">
+  <div class="card-video">
+      <video src="assets/videos/videoblog.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+      <div class="card-content">
+          <h3>Video 1</h3>
+          <p>Short description of the video.</p>
+      </div>
+  </div>
+
+  <div class="card-video">
+      <video src="assets/videos/videoblog.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+      <div class="card-content">
+          <h3>Video 2</h3>
+          <p>Another short description.</p>
+      </div>
+  </div>
+
+  <div class="card-video">
+      <video src="assets/videos/videoblog.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+      <div class="card-content">
+          <h3>Video 3</h3>
+          <p>More details about this video.</p>
+      </div>
+  </div>
+</div>
+
+<section class="review-section">
+  <h2>Customer Reviews</h2>
+  <div class="reviews-container">
+    <div class="reviews">
+      <div class="review">
+        <p>"Great product, I love it!"</p>
+        <p>- John Doe</p>
+      </div>
+      <div class="review">
+        <p>"Amazing service and quality!"</p>
+        <p>- Jane Smith</p>
+      </div>
+      <div class="review">
+        <p>"I highly recommend this to everyone!"</p>
+        <p>- Mark Lee</p>
+      </div>
+      <div class="review">
+        <p>"Absolutely fantastic!"</p>
+        <p>- Alice Cooper</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer-->
+<footer>
+  <div class="footerContainer">
+      <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+         
+      </div>
+      <div class="footerNav">
+          <ul><li><a href="index.html">Home</a></li>
+              <li><a href="assets/pages/aboutus.html">About</a></li>
+              <li><a href="assets/pages/menu.html">Menu</a></li>
+              <li><a href="assets/pages/contactus.html">Contact Us</a></li>
+              
+          </ul>
+      </div>
+      
+  </div>
+  <div class="footerBottom">
+      <p>Copyright &copy;2025; Designed by <span class="designer">Praveen</span></p>
+  </div>
+</footer>
+
+<script src="assets/static/nav.js"></script>
+<!--javascript-->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+          // Remove active classes from tabs and contents
+          tabs.forEach(t => t.classList.remove("active"));
+          contents.forEach(content => content.classList.remove("active"));
+
+          // Activate the clicked tab and its corresponding content
+          this.classList.add("active");
+          const target = this.getAttribute("data-tab");
+          document.getElementById(target).classList.add("active");
+      });
+  });
+});
+
+// review section
+document.addEventListener("DOMContentLoaded", function () {
+    const reviewsContainer = document.querySelector(".reviews-container");
+    const reviews = document.querySelector(".reviews");
+  
+    // Clone the reviews to create an infinite loop effect
+    const reviewsClone = reviews.cloneNode(true);
+    reviewsContainer.appendChild(reviewsClone);
+  });
+    </script>
+</body>
+</html>
